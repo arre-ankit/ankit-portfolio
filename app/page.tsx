@@ -1,16 +1,28 @@
-import { ProjectSection,RecentPostsSection,InternSection,ContactSection,GallerySection } from "@/components/Section"
-import {Header} from "@/components/Header"
-export default function Home() {
+import { Hero } from "../components/hero"
+import { WorkExperience } from "../components/work-exprience"
+import { Education } from "../components/education"
+import { Skills } from "../components/skills"
+import { Projects } from "../components/projects"
+import { Contact } from "../components/contact"
+import { SocialBar } from "../components/social-bar"
+import { RecentPostsSection } from "../components/blogs"
+import { GallerySection } from "../components/photograph"
+
+
+export default function Page() {
   return (
-    <div className="min-h-screen bg-black text-white">
-      <main className="container mx-auto px-4 py-8 max-w-5xl">
-        <Header />
-        <InternSection />
-        <ProjectSection />
+    <div className="min-h-screen">
+      <main className="container mx-auto px-4 py-16 max-w-5xl">
+        <Hero />
+        <WorkExperience />
+        <Education />
+        <Skills />
+        <Projects />
         <RecentPostsSection />
         <GallerySection />
-        <ContactSection />
+        <Contact />
       </main>
+      <SocialBar />
     </div>
   )
 }
